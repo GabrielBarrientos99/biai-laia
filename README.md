@@ -1,14 +1,16 @@
 # Biai · Asistente de WhatsApp para tu negocio (partner de LAIA)
 
-Página de venta de **Biai S.A.C.**, partner oficial de LAIA: seguimiento, automatizaciones a medida, un agente que propone mejoras y pestañas con lo que se activa en cada rubro (clínicas, tiendas, servicios, cursos, inmobiliarias).
+Página de venta de **Biai S.A.C.**, partner oficial de LAIA.
 
 - En línea: https://gabrielbarrientos99.github.io/biai-laia/
-- Estilos de diseño para revisar: `?estilo=editorial` (por defecto), `?estilo=afiche`, `?estilo=libreta`.
+- Estructura: título → 3 videos de publicidad → cifras → caso real en 5 pasos → chat simulado por rubro → 3 planes (Básico S/ 249, Estándar S/ 899, Premium S/ 1,199 + acompañamiento opcional S/ 300) con pago por QR → preguntas.
+- Píxel de Meta "Biai - Pixel web" (1138176152527787): `PageView`, `ViewContent`, `Contact`, `CustomizeProduct`, `InitiateCheckout`, `AddPaymentInfo`.
+- Los chats, flyers y videos de ubicación del chat son **ejemplos con negocios y datos ficticios**. Las capturas del caso real tienen difuminados los datos de pacientes y de la clínica.
 
-Esta carpeta es la **versión construida** (HTML, JS y CSS listos). El código fuente vive en el proyecto `biai-web` (repositorio evolai), en `src/pages/LaiaVenta.tsx` y `src/app/temasVenta.ts`, hecho con la librería Astryx. Para actualizar:
+Esta carpeta es la **versión construida** (HTML, JS y CSS listos). El código fuente está en `biai-web` (repositorio evolai): `laia.html`, `src/pages/LaiaVenta.tsx` y `src/app/temasVenta.ts`, hecho con la librería Astryx. Para actualizar:
 
-```bash
+```
 cd biai-web
-MSYS_NO_PATHCONV=1 npx vite build --base /biai-laia/ --outDir ../biai-laia --emptyOutDir
-# luego dejar solo laia.html (renombrado a index.html), assets/ y laia/
+npx vite build --base /biai-laia/ --outDir <carpeta temporal> --emptyOutDir
+# copiar laia.html como index.html, los assets/ que usa y los archivos de laia/ que usa la página
 ```
